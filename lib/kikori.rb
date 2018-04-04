@@ -1,8 +1,9 @@
 require 'kikori/version'
 require 'kikori/finder'
+require 'kikori/tree'
 require 'kikori/branch'
-require 'kikori/leaf'
 
+# Find all branches
 module Kikori
   def self.find(query)
     Finder.execute(query)

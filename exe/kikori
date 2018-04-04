@@ -5,24 +5,30 @@ require 'thor'
 require 'pry'
 
 module Kikori
+  # Use on CLI
   class CLI < Thor
     class_option :help, type: :boolean, aliases: '-h', desc: 'help message.'
     class_option :version, type: :boolean, desc: 'version'
     default_task :hello
 
-    desc 'hello', 'say hello world!'
-    def hello
-      puts 'hello'
+    desc 'find', '横断検索だ！'
+    def find(query, cmd = nil)
+      tree = Kikori.find(query)
+      case cmd
+      when '-b'
+        puts tree.branch_names
+      when '-f'
+        puts tree.paths
+      when nil
+        puts tree.leafs
+      end
+
+      tree.branches.map(&:leaf)
     end
 
     desc 'version', 'show version'
     def version
       puts Kikori::VERSION
-    end
-
-    desc 'pry', 'pry!'
-    def pry
-      binding.pry
     end
   end
 end
