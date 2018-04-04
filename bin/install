@@ -1,0 +1,4 @@
+#!/bin/bash
+
+rake build
+sudo gem i -l pkg/kikori-0.1.0.gem
