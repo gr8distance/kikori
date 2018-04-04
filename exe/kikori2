@@ -1,3 +1,24 @@
 #!/usr/bin/env ruby
 
 require "kikori2"
+require 'thor'
+
+module Kikori2
+  class CLI < Thor
+    class_option :help, type: :boolean, aliases: '-h', desc: 'help message.'
+    class_option :version, type: :boolean, desc: 'version'
+    default_task :hello
+
+    desc 'hello', 'say hello world!'
+    def hello
+      puts 'hello'
+    end
+
+    desc 'version', 'show version'
+    def version
+      puts '0.1.0'
+    end
+  end
+end
+
+Kikori2::CLI.start(ARGV)
