@@ -1,7 +1,8 @@
 #!/usr/bin/env ruby
 
-require "kikori"
+require 'kikori'
 require 'thor'
+require 'pry'
 
 module Kikori
   class CLI < Thor
@@ -17,6 +18,11 @@ module Kikori
     desc 'version', 'show version'
     def version
       puts Kikori::VERSION
+    end
+
+    desc 'pry', 'pry!'
+    def pry
+      binding.pry
     end
   end
 end
