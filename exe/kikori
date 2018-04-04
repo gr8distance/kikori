@@ -1,9 +1,9 @@
 #!/usr/bin/env ruby
 
-require "kikori2"
+require "kikori"
 require 'thor'
 
-module Kikori2
+module Kikori
   class CLI < Thor
     class_option :help, type: :boolean, aliases: '-h', desc: 'help message.'
     class_option :version, type: :boolean, desc: 'version'
@@ -16,9 +16,9 @@ module Kikori2
 
     desc 'version', 'show version'
     def version
-      puts '0.1.0'
+      puts Kikori::VERSION
     end
   end
 end
 
-Kikori2::CLI.start(ARGV)
+Kikori::CLI.start(ARGV)

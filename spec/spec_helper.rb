@@ -1,5 +1,5 @@
 require "bundler/setup"
-require "kikori2"
+require "kikori"
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure

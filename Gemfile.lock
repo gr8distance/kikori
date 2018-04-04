@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    kikori2 (0.1.0)
+    kikori (0.1.0)
       thor
 
 GEM
@@ -34,7 +34,7 @@ PLATFORMS
 
 DEPENDENCIES
   bundler (~> 1.16)
-  kikori2!
+  kikori!
   pry
   rake (~> 10.0)
   rspec (~> 3.0)

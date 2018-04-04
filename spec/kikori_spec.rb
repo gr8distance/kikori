@@ -1,6 +1,6 @@
-RSpec.describe Kikori2 do
+RSpec.describe Kikori do
   it "has a version number" do
-    expect(Kikori2::VERSION).not_to be nil
+    expect(Kikori::VERSION).not_to be nil
   end
 
   it "does something useful" do

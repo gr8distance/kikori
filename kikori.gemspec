@@ -1,11 +1,11 @@
 
 lib = File.expand_path("../lib", __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require "kikori2/version"
+require "kikori/version"
 
 Gem::Specification.new do |spec|
-  spec.name          = "kikori2"
-  spec.version       = Kikori2::VERSION
+  spec.name          = "kikori"
+  spec.version       = Kikori::VERSION
   spec.authors       = ["aimerald"]
   spec.email         = ["aimerald3@gmail.com"]
 
