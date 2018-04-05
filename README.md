@@ -1,8 +1,18 @@
 # Kikori
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/kikori`. To experiment with that code, run `bin/console` for an interactive prompt.
+`kikori`は全ブランチのフファイルを横断的に検索するためのGemやで。
 
-TODO: Delete this and the text above, and describe your gem
+`git grep`とか `ag`は単一のブランチに対してしか検索掛けられへんかったけど `kikori`はそんな制約お構いなしに検索しよる。
+
+誰かが別ブランチでどんな変数名や関数名を付けても自分のブランチから検索することができるっちゅうことやからな。
+
+個人的なおすすめは `peco`と一緒に使うことや。ブランチの数が増えたら検索結果がやばいことになるからな。 `peco`らんとやってられへんのや(´・ω・`)
+
+こんな機能欲しいとかあったらIssuesに書いといてな。高まった時に修正するから。
+
+せや、最後に大事なこと書かなあかんかった。
+
+このGemテスト書いてないねん(´・ω・`)
 
 ![結果画面](https://github.com/aimerald/kikori/blob/master/images/ss.png)
 
@@ -12,6 +22,8 @@ TODO: Delete this and the text above, and describe your gem
 # git clone https://github.com/aimerald/kikori
 
 # cd kikori
+
+# bundle install
 
 # ./bin/install -> Install Local Gem
 ```
