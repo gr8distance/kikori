@@ -32,7 +32,7 @@ And then execute:
 
     $ bundle
 
-Or install it yourself as:
+Or install it yourself as: <- すまん、まだ対応してへんのや( ﾟдﾟ )
 
     $ gem install kikori
 
